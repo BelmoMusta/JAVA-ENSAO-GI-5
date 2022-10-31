@@ -4,7 +4,12 @@ public class Product extends AbstractProduct {
 	
 	@Override
 	public Product clone() throws CloneNotSupportedException {
-		throw new ToBeCompletedException("Clone a product");
+		return new Product(this);
+	}
+	public Product(){}
+	public Product(Product product){
+		setPrice(product.getPrice());
+		///
 	}
 	
 	
